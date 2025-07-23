@@ -11,9 +11,11 @@ func main() {
 	db.InitDB()
 
 	router := gin.Default()
-	
+
 	router.GET("/about", controllers.GetAboutPageDataHandler())
 	router.GET("/facilities", controllers.GetAllFacilitiesHandler())
+	router.GET("/doctors", controllers.GetDoctorsHandler())
+	router.GET("/testimonials", controllers.GetAllTestimonialsHandler())
 
 	router.Run(":8080")
 }
