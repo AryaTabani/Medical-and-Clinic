@@ -13,10 +13,8 @@ var router *gin.Engine
 func init() {
 	db.InitDB()
 
-	// ۲. ساخت روتر Gin
 	router = gin.Default()
 
-	// ۳. تعریف تمام مسیرها (کپی شده از main.go شما)
 	router.GET("/about", controllers.GetAboutPageDataHandler())
 	router.GET("/facilities", controllers.GetAllFacilitiesHandler())
 	router.GET("/doctors", controllers.GetDoctorsHandler())
