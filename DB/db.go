@@ -26,9 +26,11 @@ func createtables() {
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		name TEXT NOT NULL,
 		address TEXT,
-		is_active BOOLEAN NOT NULL DEFAULT true,
-		call_number TEXT,
-		email TEXT
+		phone_number TEXT,
+		email TEXT,
+		latitude REAL,
+		longitude REAL,
+		is_active BOOLEAN NOT NULL DEFAULT true
 	);`
 
 	_, err := DB.Exec(createClinicsTable)
