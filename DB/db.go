@@ -51,4 +51,16 @@ func createtables() {
 	if err != nil {
 		panic("Failed to create doctors table")
 	}
+	createFacilitiesTable := `
+	CREATE TABLE IF NOT EXISTS facilities (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT NOT NULL,
+		description TEXT,
+		image_url TEXT NOT NULL
+	);`
+
+	_, err = DB.Exec(createFacilitiesTable)
+	if err != nil {
+		panic("Failed to create doctors table")
+	}
 }
