@@ -16,6 +16,8 @@ func main() {
 	router.GET("/facilities", controllers.GetAllFacilitiesHandler())
 	router.GET("/doctors", controllers.GetDoctorsHandler())
 	router.GET("/testimonials", controllers.GetAllTestimonialsHandler())
+	router.GET("/clinics", controllers.GetAllClinicsHandler())
+
 
 	router.Run(":8080")
 }
